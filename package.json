@@ -1,0 +1,17 @@
+{
+	"name": "starter",
+	"module": "index.ts",
+	"type": "module",
+	"workspaces": [
+		"packages/*"
+	],
+	"devDependencies": {
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	},
+	"dependencies": {
+		"dmno": "^0.0.39"
+	}
+}

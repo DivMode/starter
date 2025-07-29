@@ -1,0 +1,19 @@
+{
+	"name": "workers",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"deploy": "dwrangler deploy",
+		"dev": "dwrangler dev",
+		"start": "dwrangler dev",
+		"cf-typegen": "wrangler types"
+	},
+	"devDependencies": {
+		"typescript": "^5.5.2",
+		"wrangler": "^4.26.0"
+	},
+	"dependencies": {
+		"@dmno/cloudflare-platform": "^0.0.4",
+		"dmno": "^0.0.39"
+	}
+}
