@@ -13,7 +13,6 @@ import { DurableObject } from "cloudflare:workers";
  * Learn more at https://developers.cloudflare.com/durable-objects
  */
 
-
 /** A Durable Object's behavior is defined in an exported Javascript class */
 export class MyDurableObject extends DurableObject {
 	/**
@@ -35,7 +34,7 @@ export class MyDurableObject extends DurableObject {
 	 * @returns The greeting to be sent back to the Worker
 	 */
 	async sayHello(name: string): Promise<string> {
-		return `Hello, ${name}!`;
+		return `Hello, ${name} Env: ${DMNO_CONFIG.CLOUDFLARE_ACCOUNT_ID}!`;
 	}
 }
 
@@ -57,7 +56,6 @@ export default {
 		// Create a stub to open a communication channel with the Durable
 		// Object instance.
 		const stub = env.MY_DURABLE_OBJECT.get(id);
-
 		// Call the `sayHello()` RPC method on the stub to invoke the method on
 		// the remote Durable Object instance
 		const greeting = await stub.sayHello("world");

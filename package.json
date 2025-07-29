@@ -12,6 +12,7 @@
 		"typescript": "^5"
 	},
 	"dependencies": {
+		"@dmno/1password-plugin": "^0.0.13",
 		"dmno": "^0.0.39"
 	}
 }
